@@ -21,15 +21,15 @@ let track_list = [
   {
     name: "MANGO",
     artist: "Kormak",
-    image: "/img/kormak-mango.jpg",
-    path: "/media/Kormak - Mango.mp3",
+    image: "kormak-mango.jpg",
+    path: "Kormak - Mango.mp3",
     hex: "#D6722C"
   },
   {
     name: "LOVE INSIDE",
     artist: "Phillip George",
-    image: "/img/PhillipGeorge-LoveInside.jpg",
-    path: "/media/Phillip George - Love Inside.mp3",
+    image: "PhillipGeorge-LoveInside.jpg",
+    path: "Phillip George - Love Inside.mp3",
     hex: "#737171"
   }
 ];
