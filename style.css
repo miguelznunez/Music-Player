@@ -1,0 +1,186 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Georama:wght@200;400;600;700;800&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  height: 100vh;
+  font-family: 'Gruppo', cursive;
+}
+
+.details{
+  width: 300px;
+  height: auto;
+}
+
+#track-art{
+  padding: 20px;
+  width: 300px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+  -webkit-box-shadow: -1px 7px 23px 1px rgba(0,0,0,0.48); 
+  box-shadow: -1px 7px 23px 1px rgba(0,0,0,0.48);
+}
+
+/* Volume Slider  */
+
+.my-vol{
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.volume_container{
+  position: relative;
+}
+
+.fa-ellipsis-v{
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.vol_btn{
+  border: none;
+  background-color: transparent;
+}
+
+.dropdown-menu{
+  position: absolute;
+  right: 0;
+  top: calc(100% + .25rem);
+  background-color: black;
+  padding: .75rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.volume_container.active > .vol_btn + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.player{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.track-details h1{
+  padding-left: 5px;
+}
+
+#track-artist{
+  color: #bbb;
+}
+
+#track-name{
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Define the slider width so that it scales properly */
+.slider{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: lightgray;
+  text-shadow: 3px 5px 2px black;
+}
+
+  
+/* Modify the appearance of the slider */
+.seek_slider, .volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 3px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 1);
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+  
+/* Modify the appearance of the slider thumb */
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: #22ce8c;
+  cursor: pointer;
+  border-radius: 50%;
+}
+  
+/* Change the opacity when mouse is hovered */
+.seek_slider:hover,
+.volume_slider:hover {
+  opacity: 1.0;
+}
+  
+.seek_slider {
+  width: 60%;
+}
+
+.current-time,
+.total-duration {
+  font-size: 0.7rem;
+  padding: 10px;
+}
+
+.controls{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: transparent;
+  padding-bottom: 10px;
+  position: relative;
+  color: #FFFFFF;
+  text-shadow: 3px 5px 2px #262626;
+}
+
+.fa-backward, .fa-forward{
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.fa-play, .fa-pause{
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
