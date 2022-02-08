@@ -101,6 +101,7 @@ body{
 #track-name{
   font-size: 1.5rem;
   color: white;
+  letter-spacing: 1px;
 }
 
 /* Define the slider width so that it scales properly */
@@ -156,6 +157,7 @@ body{
   font-size: 0.7rem;
   top: 0;
   left: 6%;
+  letter-spacing: 1px;
 }
 
 .total-duration{
@@ -163,6 +165,7 @@ body{
   font-size: 0.7rem;
   top: 0;
   right: 6%;
+  letter-spacing: 1px;
 } 
 
 .controls{
