@@ -19,18 +19,32 @@ let total_duration = document.querySelector(".total-duration");
 let curr_track = document.createElement('audio');
 let track_list = [
   {
+    name: "ONE DAY",
+    artist: "Common Kings",
+    image: "common_kings_one_day.jpg",
+    path: "Common Kings - One Day.mp3",
+    hex: "#76cac2"
+  },
+  {
+    name: "CREW",
+    artist: "GoldLink",
+    image: "goldlink_crew.jpg",
+    path: "GoldLink - Crew.mp3",
+    hex: "#fb6c5c"
+  },
+  {
+    name: "RESPECT DUE",
+    artist: "Junior Reid",
+    image: "junior_reid_respect_due.jpg",
+    path: "Junior Reid - Respect Due.mp3",
+    hex: "#efd97b"
+  },
+  {
     name: "MANGO",
     artist: "Kormak",
     image: "kormak-mango.jpg",
     path: "Kormak - Mango.mp3",
     hex: "#D6722C"
-  },
-  {
-    name: "LOVE INSIDE",
-    artist: "Phillip George",
-    image: "PhillipGeorge-LoveInside.jpg",
-    path: "Phillip George - Love Inside.mp3",
-    hex: "#737171"
   }
 ];
 
