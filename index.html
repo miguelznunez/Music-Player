@@ -11,44 +11,48 @@
 </head>
 <body>
 
-  <div class="details">
-
-    <div id="track-art">
-      <div class="my-vol">
-        <div class="volume_container vol" data-dropdown>
-          <button class="vol_btn"><i class="fas fa-ellipsis-v" data-dropdown-button></i></button>
-          <div class="dropdown-menu">
-            <i class="fa fa-volume-down"></i>
-            <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
-            <i class="fa fa-volume-up"></i>
+  <div class="container">
+    <div class="details">
+    
+      <div id="track-art">
+        <div class="my-vol">
+          <div class="volume_container vol" data-dropdown>
+            <button class="vol_btn"><i class="fas fa-ellipsis-v" data-dropdown-button></i></button>
+            <div class="dropdown-menu">
+              <i class="fa fa-volume-down"></i>
+              <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+              <i class="fa fa-volume-up"></i>
+            </div>
           </div>
         </div>
-      </div>  
-      <div class="track-details">
-        <p id="track-artist"></p>
-        <h1 id="track-name" ></h1>
-      </div>
-    </div>
-
-    <div class="slider">
-      
-      <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
-      <div class="current-time">00:00</div>
-      <div class="total-duration">00:00</div>
-    </div>
-
-    <div class="player">
-      <div class="controls">
-        <i class="fas fa-backward" id="previous-track"></i>
-        <div id="play_pause">
-          <i class="fas fa-play"></i>
+        <div class="track-details">
+          <p id="track-artist"></p>
+          <h1 id="track-name"></h1>
         </div>
-        <i class="fas fa-forward" id="next-track"></i>
       </div>
+    
+      <div class="slider">
+    
+        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+        <div class="current-time">00:00</div>
+        <div class="total-duration">00:00</div>
+      </div>
+    
+      <div class="player">
+        <div class="controls">
+          <i class="fas fa-backward" id="previous-track"></i>
+          <div id="play_pause">
+            <i class="fas fa-play"></i>
+          </div>
+          <i class="fas fa-forward" id="next-track"></i>
+        </div>
+      </div>
+    
     </div>
 
   </div>
 
+  
   <script src="script.js"></script>
   
 </body>

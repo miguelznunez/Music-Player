@@ -7,13 +7,14 @@
 }
 
 body{
+  height: 100vh;
+  font-family: 'Gruppo', cursive;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  gap: 10px;
-  height: 100vh;
-  font-family: 'Gruppo', cursive;
+  background-position: center;
+  background-size: cover;
+  /* background-image: -webkit-radial-gradient(center, #efda7ba7, #000000), url(kormak-mango.jpg); */
 }
 
 .details{

@@ -19,6 +19,13 @@ let total_duration = document.querySelector(".total-duration");
 let curr_track = document.createElement('audio');
 let track_list = [
   {
+    name: "HOUSE PARTY",
+    artist: "Meek Mill",
+    image: "meek_mill-house_party.jpeg",
+    path: "Meek Mill - House Party.mp3",
+    hex: "#637c92"
+  },
+  {
     name: "MANGO",
     artist: "Kormak",
     image: "kormak-mango.jpg",
@@ -31,13 +38,6 @@ let track_list = [
     image: "goldlink_crew.jpg",
     path: "GoldLink - Crew.mp3",
     hex: "#fb6c5c"
-  },
-  {
-    name: "RESPECT DUE",
-    artist: "Junior Reid",
-    image: "junior_reid_respect_due.jpg",
-    path: "Junior Reid - Respect Due.mp3",
-    hex: "#efd97b"
   }
 ];
 
