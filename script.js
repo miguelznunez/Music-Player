@@ -87,15 +87,20 @@ function playTrack() {
   playpause_btn.innerHTML = '<i class="fas fa-pause"></i>';
 }
 
+function randomIndex(arr, excludeIndex){
+  let indexes = Object.keys(arr); //get a list of indexes 
+  indexes.splice(excludeIndex, 1); //remove the unwanted
+  return indexes[Math.floor(Math.random() * indexes.length)]; //pick a new index
+}
 
 function loadTrack(track_index) {
   // Clear the previous seek timer
   clearInterval(updateTimer);
   resetValues();
 
-  
+  // If shuffle is activated choose a random song without repeating
   if(shuffle){
-    track_index = Math.floor(Math.random() * track_list.length)
+    track_index = randomIndex(track_list, track_list.findIndex(x => x.path === curr_track.getAttribute("src")));
   }
 
   // Load a new track
