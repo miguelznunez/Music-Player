@@ -123,9 +123,6 @@ body{
   pointer-events: auto;
 }
 
-.player{
-  width: 300px;
-}
 
 #track-artist{
   color: #bbb;
@@ -137,8 +134,6 @@ body{
   letter-spacing: 1px;
 }
 
-/* Define the slider width so that it scales properly */
-
 .slider{
   position: relative;
   display: flex;
@@ -147,6 +142,11 @@ body{
   color: white;
   text-shadow: 1px 3px 2px black;
   height: 12px;
+}
+
+.player{
+  position: relative;
+  width: 300px;
 }
 
 .current-time{
@@ -182,8 +182,24 @@ body{
   cursor: pointer;
 }
 
+.fa-random{
+  position: absolute;
+  top: 15%;
+  left: 12%;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.fa-random.active{
+  color: gray;
+}
+
 .fa-play, .fa-pause{
   font-size: 1.5rem;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   text-shadow: 1px 3px 2px black;
 }
 

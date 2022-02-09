@@ -1,6 +1,7 @@
 let track_index = 0;
 let isPlaying = false;
 let updateTimer;
+let shuffle = false;
 
 let track_name = document.querySelector("#track-name");
 let track_artist = document.querySelector("#track-artist");
@@ -9,6 +10,7 @@ let track_art = document.querySelector("#track-art");
 let playpause_btn = document.querySelector("#play_pause");
 let previous_btn = document.querySelector("#previous-track");
 let next_btn = document.querySelector("#next-track");
+let shuffle_btn = document.querySelector("#shuffle-track");
 
 let seek_slider = document.querySelector(".seek_slider");
 let volume_slider = document.querySelector(".volume_slider");
@@ -41,6 +43,18 @@ let track_list = [
   }
 ];
 
+shuffle_btn.addEventListener("click", () => {
+  if(shuffle === false){
+    shuffle = true;
+    document.querySelector(".fa-random").className += " active";
+  }
+  else{
+    shuffle = false;
+    removeActive()
+    track_index = track_list.findIndex(x => x.path === curr_track.getAttribute("src"));
+  }
+})
+
 playpause_btn.addEventListener("click", () => {
   playpauseTrack();
 })
@@ -53,12 +67,19 @@ next_btn.addEventListener("click", () => {
   nextTrack();
 })
 
+// REMOVE ACTIVE CLASS FROM ARROW
+function removeActive(){
+  var current = document.querySelectorAll(".active");
+  current[0].className = current[0].className.replace(" active", "");
+}
+
 function playpauseTrack() {
   if (!isPlaying) 
     playTrack();
   else 
     pauseTrack();
 }
+
 
 function playTrack() {
   curr_track.play();
@@ -71,6 +92,11 @@ function loadTrack(track_index) {
   // Clear the previous seek timer
   clearInterval(updateTimer);
   resetValues();
+
+  
+  if(shuffle){
+    track_index = Math.floor(Math.random() * track_list.length)
+  }
 
   // Load a new track
   curr_track.src = track_list[track_index].path;
@@ -162,6 +188,7 @@ function seekUpdate() {
     total_duration.textContent = durationMinutes + ":" + durationSeconds;
   }
 }
+
 
 document.addEventListener("click", e => {
   const isDropdownButton = e.target.matches("[data-dropdown-button]")
