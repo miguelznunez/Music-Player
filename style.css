@@ -106,58 +106,52 @@ body{
 }
 
 /* Define the slider width so that it scales properly */
+
 .slider{
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 12px;
-  width: 300px;
+  align-items: center;  
   color: white;
   text-shadow: 1px 3px 2px black;
+  height: 12px;
+}
+
+input[type='range']{
+  width: 170px;
+  overflow: hidden;  
+  -webkit-appearance: none;
+  background-color: white;
+  border-radius: 5px;
 }
 
 /* Modify the appearance of the slider */
-.seek_slider, .volume_slider {
+input[type='range']::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
   height: 3px;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 1);
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+  color: black;
+  background-color: gray;
 }
   
 /* Modify the appearance of the slider thumb */
-.seek_slider::-webkit-slider-thumb,
-.volume_slider::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb{
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   width: 10px;
   height: 10px;
-  background: darkgray;
+  background: white;
   cursor: pointer;
-  border-radius: 50%;
-}
-  
-/* Change the opacity when mouse is hovered */
-.seek_slider:hover,
-.volume_slider:hover {
-  opacity: 1.0;
-}
-  
-.seek_slider {
-  width: 60%;
+  box-shadow: -80px 0 0 80px #262626;
 }
 
 .current-time{
   position: absolute;
   font-size: 0.7rem;
   top: 0;
-  left: 6%;
+  left: 7%;
   letter-spacing: 1px;
 }
 
@@ -165,7 +159,7 @@ body{
   position: absolute;
   font-size: 0.7rem;
   top: 0;
-  right: 6%;
+  right: 7%;
   letter-spacing: 1px;
 } 
 
