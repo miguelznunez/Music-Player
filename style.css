@@ -49,7 +49,8 @@ body{
   /* background-image: -webkit-radial-gradient(center, #efda7ba7, #000000), url(kormak-mango.jpg); */
 }
 
-.details{
+/* MUSIC PLAYER WRAPPER */
+.music-player-wrappper{
   width: 300px;
   height: 480px;
   display: flex;
@@ -57,6 +58,7 @@ body{
   justify-content: space-between;
 }
 
+/* TRACK ART */
 #track-art{
   padding: 20px;
   width: 300px;
@@ -64,28 +66,31 @@ body{
   background-size: cover;
   background-position: center;
   position: relative;
-
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-
   border-top-right-radius: 25px;
   border-bottom-left-radius: 25px;
-
   -webkit-box-shadow: -1px 7px 23px 1px rgba(0,0,0,0.48); 
   box-shadow: -1px 7px 23px 1px rgba(0,0,0,0.48);
 }
 
-/* Volume Slider  */
-.my-vol{
+/* TRACK VOLUME */
+.track-volume-container{
   width: 100%;
   color: white;
   display: flex;
   justify-content: flex-end;
 }
 
-.volume_container{
+.volume-container{
   position: relative;
+}
+
+.volume-container.active > #vol_btn + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .fa-ellipsis-v{
@@ -94,7 +99,7 @@ body{
   text-shadow: 1px 3px 2px black;
 }
 
-.vol_btn{
+#vol_btn{
   border: none;
   background-color: transparent;
 }
@@ -117,13 +122,7 @@ body{
   gap: 10px;
 }
 
-.volume_container.active > .vol_btn + .dropdown-menu {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-
+/* TRACK INFO */
 #track-artist{
   color: #bbb;
 }
@@ -134,7 +133,8 @@ body{
   letter-spacing: 1px;
 }
 
-.slider{
+/* TRACK ELAPSED TIME */
+.track-elapsed-time-container{
   position: relative;
   display: flex;
   justify-content: center;
@@ -142,11 +142,6 @@ body{
   color: white;
   text-shadow: 1px 3px 2px black;
   height: 12px;
-}
-
-.player{
-  position: relative;
-  width: 300px;
 }
 
 .current-time{
@@ -165,6 +160,12 @@ body{
   letter-spacing: 1px;
 } 
 
+/* MUSIC CONTROLS */
+.music-controls-container{
+  position: relative;
+  width: 300px;
+}
+
 .controls{
   display: flex;
   justify-content: center;
@@ -177,11 +178,6 @@ body{
   text-shadow: 1px 3px 2px black;
 }
 
-.fa-backward, .fa-forward{
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
 .fa-random{
   position: absolute;
   top: 15%;
@@ -192,6 +188,11 @@ body{
 
 .fa-random.active{
   color: gray;
+}
+
+.fa-backward, .fa-forward{
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .fa-play, .fa-pause{

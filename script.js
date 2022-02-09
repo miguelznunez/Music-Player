@@ -67,7 +67,7 @@ next_btn.addEventListener("click", () => {
   nextTrack();
 })
 
-// REMOVE ACTIVE CLASS FROM ARROW
+
 function removeActive(){
   var current = document.querySelectorAll(".active");
   current[0].className = current[0].className.replace(" active", "");
@@ -79,7 +79,6 @@ function playpauseTrack() {
   else 
     pauseTrack();
 }
-
 
 function playTrack() {
   curr_track.play();
