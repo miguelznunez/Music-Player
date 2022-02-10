@@ -46,12 +46,11 @@ body{
   align-items: center;
   background-position: center;
   background-size: cover;
-  /* background-image: -webkit-radial-gradient(center, #efda7ba7, #000000), url(kormak-mango.jpg); */
 }
 
 /* MUSIC PLAYER WRAPPER */
 .music-player-wrapper{
-  width: 300px;
+  width: 400px;
   height: 480px;
   display: flex;
   flex-direction: column;
@@ -61,7 +60,7 @@ body{
 /* TRACK ART */
 #track-art{
   padding: 20px;
-  width: 300px;
+  width: 400px;
   height: 400px;
   background-size: cover;
   background-position: center;
@@ -69,8 +68,8 @@ body{
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  border-top-right-radius: 25px;
-  border-bottom-left-radius: 25px;
+  border-top-right-radius: 45px;
+  border-bottom-left-radius: 45px;
   -webkit-box-shadow: -1px 7px 23px 1px rgba(0,0,0,0.48); 
   box-shadow: -1px 7px 23px 1px rgba(0,0,0,0.48);
 }
@@ -148,7 +147,7 @@ body{
   position: absolute;
   font-size: 0.7rem;
   top: 0;
-  left: 7%;
+  left: 16%;
   letter-spacing: 1px;
 }
 
@@ -156,14 +155,14 @@ body{
   position: absolute;
   font-size: 0.7rem;
   top: 0;
-  right: 7%;
+  right: 16%;
   letter-spacing: 1px;
 } 
 
 /* MUSIC CONTROLS */
 .music-controls-container{
   position: relative;
-  width: 300px;
+  width: 400px;
 }
 
 .controls{
@@ -181,7 +180,7 @@ body{
 .fa-random{
   position: absolute;
   top: 15%;
-  left: 12%;
+  left: 24%;
   font-size: 0.9rem;
   cursor: pointer;
 }
@@ -204,3 +203,44 @@ body{
    text-shadow: 1px 3px 2px black;
 }
 
+@media(max-width: 480px){
+    .music-player-wrapper{
+      width: 90%;
+    }
+
+    #track-art{
+      width: 100%;
+    }
+
+    .music-controls-container{
+      width: 100%;
+    }
+
+    .current-time{
+      left: 6%;
+    }
+
+    .total-duration{
+      right: 6%;
+    } 
+
+    .fa-random{
+      left: 18%;
+    }
+
+}
+
+@media(max-width: 320px){
+    .current-time{
+      left: -2%;
+    }
+
+    .total-duration{
+      right: -2%;
+    } 
+
+    .fa-random{
+      left: 10%;
+    }
+
+}

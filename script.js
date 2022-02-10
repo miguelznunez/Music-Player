@@ -24,22 +24,19 @@ let track_list = [
     name: "HOUSE PARTY",
     artist: "Meek Mill",
     image: "meek_mill-house_party.jpeg",
-    path: "Meek Mill - House Party.mp3",
-    hex: "#637c92"
+    path: "Meek Mill - House Party.mp3"
   },
   {
-    name: "MANGO",
-    artist: "Kormak",
-    image: "kormak-mango.jpg",
-    path: "Kormak - Mango.mp3",
-    hex: "#D6722C"
+    name: "HELLO",
+    artist: "Pop Smoke",
+    image: "pop_smoke-hello.jpg",
+    path: "Pop Smoke - Hello.mp3"
   },
   {
-    name: "CREW",
-    artist: "GoldLink",
-    image: "goldlink_crew.jpg",
-    path: "GoldLink - Crew.mp3",
-    hex: "#fb6c5c"
+    name: "BOY BANDZ",
+    artist: "Post Malone",
+    image: "post_malone-boy_bands.png",
+    path: "Post Malone - Boy Bandz.mp3"
   }
 ];
 
@@ -110,10 +107,10 @@ function loadTrack(track_index) {
   track_art.style.backgroundImage = `linear-gradient(to bottom, transparent 0%, black), url(${track_list[track_index].image})`;
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
-  document.body.style.background = `${track_list[track_index].hex}`;
-  document.body.style.background = `-webkit-radial-gradient(center, ${track_list[track_index].hex}, #000000)`;
-  document.body.style.background = `-moz-radial-gradient(center, ${track_list[track_index].hex}, #000000)`;
-  document.body.style.background = `radial-gradient(ellipse at center, ${track_list[track_index].hex}, #000000)`;
+  // document.body.style.background = `${track_list[track_index].hex}`;
+  document.body.style.background = `-webkit-radial-gradient(center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].image})`;
+  document.body.style.background = `-moz-radial-gradient(center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].image}`;
+  document.body.style.background = `radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].image}`;
 
   // Set an interval of 1000 milliseconds
   // for updating the seek slider
