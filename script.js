@@ -23,25 +23,29 @@ let track_list = [
   {
     name: "HOUSE PARTY",
     artist: "Meek Mill",
-    image: "meek_mill-house_party.jpeg",
+    album_image_small: "meek_mill-house_party_500px.png",
+    album_image_big: "meek_mill-house_party_1000px.jpeg",
     path: "Meek Mill - House Party.mp3"
   },
   {
     name: "WEED THEM OUT",
     artist: "Little Kirk",
-    image: "little_kirk-weed_them_out.png",
+    album_image_small: "little_kirk-weed_them_out_500px.png",
+    album_image_big: "little_kirk-weed_them_out_1000px.png",
     path: "Little Kirk - Weed Them Out.mp3"
   },
   {
     name: "HELLO",
     artist: "Pop Smoke",
-    image: "pop_smoke-hello.jpg",
+    album_image_small: "pop_smoke-hello_500px.png",
+    album_image_big: "pop_smoke-hello_1000px.jpg",
     path: "Pop Smoke - Hello.mp3"
   },
   {
     name: "BOY BANDZ",
     artist: "Post Malone",
-    image: "post_malone-boy_bands.png",
+    album_image_small: "post_malone-boy_bands_500px.png",
+    album_image_big: "post_malone-boy_bands_1000px.png",
     path: "Post Malone - Boy Bandz.mp3"
   }
 ];
@@ -110,13 +114,13 @@ function loadTrack(track_index) {
   curr_track.load();
 
   // Update details of the track
-  track_art.style.backgroundImage = `linear-gradient(to bottom, transparent 0%, black), url(${track_list[track_index].image})`;
+  track_art.style.backgroundImage = `linear-gradient(to bottom, transparent 0%, black), url(${track_list[track_index].album_image_small})`;
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
   document.body.style.background = "#000000";
-  document.body.style.background = `-webkit-radial-gradient(center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].image})`;
-  document.body.style.background = `-moz-radial-gradient(center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].image}`;
-  document.body.style.background = `radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].image}`;
+  document.body.style.background = `-webkit-radial-gradient(center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].album_image_big})`;
+  document.body.style.background = `-moz-radial-gradient(center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].album_image_big}`;
+  document.body.style.background = `radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].album_image_big}`;
 
   // Set an interval of 1000 milliseconds
   // for updating the seek slider
