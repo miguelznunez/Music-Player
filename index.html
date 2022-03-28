@@ -14,23 +14,10 @@
     <div class="music-player-wrapper">
 
       <div id="track-art">
-
-        <div class="track-volume-container">
-          <div class="volume-container vol" data-dropdown>
-            <button id="vol_btn"><i class="fas fa-ellipsis-v" data-dropdown-button></i></button>
-            <div class="dropdown-menu"> 
-              <i class="fa fa-volume-down"></i>
-              <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
-              <i class="fa fa-volume-up"></i>
-            </div>
-          </div>
-        </div>
-
         <div class="track-info-container">
           <p id="track-artist"></p>
           <h1 id="track-name"></h1>
         </div>
-
       </div>
 
       <div class="track-elapsed-time-container">
@@ -47,6 +34,16 @@
             <i class="fas fa-play"></i>
           </div>
           <i class="fas fa-forward" id="next-track"></i>
+          <div class="track-volume-container">
+            <div class="volume-container vol" data-dropdown>
+              <button id="vol_btn"><i class="fas fa-ellipsis-v" data-dropdown-button></i></button>
+              <div class="dropdown-menu">
+                <i class="fa fa-volume-down"></i>
+                <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                <i class="fa fa-volume-up"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

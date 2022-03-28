@@ -79,59 +79,12 @@ body{
   background-position: center;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-direction: column;
   border-top-right-radius: 45px;
   border-bottom-left-radius: 45px;
   -webkit-box-shadow: -1px 7px 23px 1px rgba(0,0,0,0.48); 
   box-shadow: -1px 7px 23px 1px rgba(0,0,0,0.48);
-}
-
-/* TRACK VOLUME */
-.track-volume-container{
-  width: 100%;
-  color: white;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.volume-container{
-  position: relative;
-}
-
-.volume-container.active > #vol_btn + .dropdown-menu {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.fa-ellipsis-v{
-  color:white;
-  cursor: pointer;
-  text-shadow: 1px 3px 2px black;
-}
-
-#vol_btn{
-  border: none;
-  background-color: transparent;
-}
-
-.dropdown-menu{
-  position: absolute;
-  right: 0;
-  top: calc(100% + .25rem);
-  background-color: black;
-  padding: .75rem;
-  border-radius: .25rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
 }
 
 /* TRACK INFO */
@@ -179,21 +132,19 @@ body{
 }
 
 .controls{
+  width: 265px;
+  margin: auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: 30px;
   background-color: transparent;
   padding-bottom: 10px;
-  position: relative;
   color: #FFFFFF;
   text-shadow: 1px 3px 2px black;
 }
 
 .fa-random{
-  position: absolute;
-  top: 15%;
-  left: 24%;
   font-size: 0.9rem;
   cursor: pointer;
 }
@@ -214,6 +165,50 @@ body{
   justify-content: center;
   align-items: center;
    text-shadow: 1px 3px 2px black;
+}
+
+/* TRACK VOLUME */
+.track-volume-container{
+  color: white;
+}
+
+.volume-container{
+  position: relative;
+}
+
+.volume-container.active > #vol_btn + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.fa-ellipsis-v{
+  color:white;
+  cursor: pointer;
+  text-shadow: 1px 3px 2px black;
+}
+
+#vol_btn{
+  border: none;
+  background-color: transparent;
+}
+
+.dropdown-menu{
+  position: absolute;
+  right: 0;
+  top: calc(100% + .80rem);
+  background-color: black;
+  padding: .75rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 @media(max-width: 480px){
