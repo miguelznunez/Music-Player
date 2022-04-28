@@ -28,6 +28,13 @@ let track_list = [
     path: "Meek Mill - House Party.mp3"
   },
   {
+    name: "SHOOTERS",
+    artist: "Tory Lanes",
+    album_image_small: "tory_lanes-shooters_500px.png",
+    album_image_big: "tory_lanes-shooters_1000px.jpg",
+    path: "Tory Lanez - Shooters.mp3"
+  },
+  {
     name: "WEED THEM OUT",
     artist: "Little Kirk",
     album_image_small: "little_kirk-weed_them_out_500px.png",
