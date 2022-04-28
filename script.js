@@ -124,6 +124,18 @@ function loadTrack(track_index) {
   track_art.style.backgroundImage = `linear-gradient(to bottom, transparent 0%, black), url(${track_list[track_index].album_image_small})`;
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
+
+  track_name.classList.add('animate__animated', 'animate__fadeInUp');
+  track_artist.classList.add('animate__animated', 'animate__fadeInUp');
+
+  track_name.addEventListener('animationend', () => {
+    track_name.classList.remove('animate__animated', 'animate__fadeInUp');
+  });
+
+  track_artist.addEventListener('animationend', () => {
+    track_artist.classList.remove('animate__animated', 'animate__fadeInUp');
+  });
+
   document.body.style.background = "#000000";
   document.body.style.background = `-webkit-radial-gradient(center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].album_image_big})`;
   document.body.style.background = `-moz-radial-gradient(center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].album_image_big}`;
