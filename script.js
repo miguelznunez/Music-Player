@@ -30,8 +30,8 @@ let track_list = [
   {
     name: "SHOOTERS",
     artist: "Tory Lanes",
-    album_image_small: "tory_lanes-shooters_500px.png",
-    album_image_big: "tory_lanes-shooters_1000px.jpg",
+    album_image_small: "tory_lanez-shooters_500px.png",
+    album_image_big: "tory_lanez-shooters_1000px.jpg",
     path: "Tory Lanez - Shooters.mp3"
   },
   {
