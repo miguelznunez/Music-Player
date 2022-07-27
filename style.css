@@ -1,54 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
-
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-input[type=range] {
-  width: 170px;
-  overflow: hidden;  
-  -webkit-appearance: none;
-  background-color: transparent;
-  border-radius: 5px;
-}
-
-/* Modify the appearance of the slider */
-input[type='range']::-webkit-slider-runnable-track {
-  width: 100%;
-  overflow: hidden;  
-  background-color: gray;
-  height: 3px;
-  border-radius: 5px;
-}
-
-input[type='range']::-moz-range-track {  
-  background-color: gray;
-  height: 3px;
-  border-radius: 5px;
-}
-  
-/* Modify the appearance of the slider thumb */
-input[type='range']::-webkit-slider-thumb{
-  appearance: none;
-  width: 10px;
-  height: 5px;
-  background: white;
-  cursor: pointer;
-  box-shadow: -80px 0 0 80px #262626;
-}
-
-input[type='range']::-moz-range-thumb{
-  appearance: none;
-  width: 10px;
-  height: 2px;
-  cursor: pointer;
-  border: none;
-}
-
-input[type="range"]::-moz-range-progress {
-  background-color: #262626; 
 }
 
 body{
@@ -59,6 +12,53 @@ body{
   align-items: center;
   background-position: center;
   background-size: cover;
+  background-color: white;
+}
+
+input[type=range] {
+  width: 170px;
+  overflow: hidden;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+/* Modify the appearance of the slider */
+input[type='range']::-webkit-slider-runnable-track {
+  width: 100%;
+  overflow: hidden;
+  background-color: gray;
+  height: 3px;
+  border-radius: 5px;
+
+}
+
+input[type='range']::-moz-range-track {
+  background-color: gray;
+  height: 3px;
+  border-radius: 5px;
+}
+
+/* Modify the appearance of the slider thumb */
+input[type='range']::-webkit-slider-thumb {
+  appearance: none;
+  width: 10px;
+  height: 5px;
+  background: white;
+  cursor: pointer;
+  box-shadow: -80px 0 0 80px #262626;
+}
+
+input[type='range']::-moz-range-thumb {
+  appearance: none;
+  width: 10px;
+  height: 2px;
+  cursor: pointer;
+  border: none;
+}
+
+input[type="range"]::-moz-range-progress {
+  background-color: #262626;
 }
 
 /* MUSIC PLAYER WRAPPER */

@@ -23,36 +23,46 @@ let track_list = [
   {
     name: "HOUSE PARTY",
     artist: "Meek Mill",
-    album_image_small: "meek_mill-house_party_500px.png",
-    album_image_big: "meek_mill-house_party_1000px.jpeg",
+    album_image_small_jpg: "meek_mill-house_party_500px.jpg",
+    album_image_small_webp: "meek_mill-house_party_500px.webp",
+    album_image_big_jpg: "meek_mill-house_party_1000px.jpg",
+    album_image_big_webp: "meek_mill-house_party_1000px.webp",
     path: "Meek Mill - House Party.mp3"
   },
   {
     name: "SHOOTERS",
     artist: "Tory Lanes",
-    album_image_small: "tory_lanez-shooters_500px.png",
-    album_image_big: "tory_lanez-shooters_1000px.jpg",
+    album_image_small_jpg: "tory_lanez-shooters_500px.jpp",
+    album_image_small_webp: "tory_lanez-shooters_500px.webp",
+    album_image_big_jpg: "tory_lanez-shooters_1000px.jpg",
+    album_image_big_webp: "tory_lanez-shooters_1000px.webp",
     path: "Tory Lanez - Shooters.mp3"
   },
   {
     name: "WEED THEM OUT",
     artist: "Little Kirk",
-    album_image_small: "little_kirk-weed_them_out_500px.png",
-    album_image_big: "little_kirk-weed_them_out_1000px.png",
+    album_image_small_jpg: "little_kirk-weed_them_out_500px.jpg",
+    album_image_small_webp: "little_kirk-weed_them_out_500px.webp",
+    album_image_big_jpg: "little_kirk-weed_them_out_1000px.jpg",
+    album_image_big_webp: "little_kirk-weed_them_out_1000px.webp",
     path: "Little Kirk - Weed Them Out.mp3"
   },
   {
     name: "HELLO",
     artist: "Pop Smoke",
-    album_image_small: "pop_smoke-hello_500px.png",
-    album_image_big: "pop_smoke-hello_1000px.jpg",
+    album_image_small_jpg: "pop_smoke-hello_500px.jpg",
+    album_image_small_webp: "pop_smoke-hello_500px.webp",
+    album_image_big_jpg: "pop_smoke-hello_1000px.jpg",
+    album_image_big_webp: "pop_smoke-hello_1000px.webp",
     path: "Pop Smoke - Hello.mp3"
   },
   {
     name: "BOY BANDZ",
     artist: "Post Malone",
-    album_image_small: "post_malone-boy_bands_500px.png",
-    album_image_big: "post_malone-boy_bands_1000px.png",
+    album_image_small_jpg: "post_malone-boy_bands_500px.jpg",
+    album_image_small_webp: "post_malone-boy_bands_500px.webp",
+    album_image_big_jpg: "post_malone-boy_bands_1000px.jpg",
+    album_image_big_webp: "post_malone-boy_bands_1000px.webp",
     path: "Post Malone - Boy Bandz.mp3"
   }
 ];
@@ -121,7 +131,7 @@ function loadTrack(track_index) {
   curr_track.load();
 
   // Update details of the track
-  track_art.style.backgroundImage = `linear-gradient(to bottom, transparent 0%, black), url(${track_list[track_index].album_image_small})`;
+  track_art.style.backgroundImage = `linear-gradient(to bottom, transparent 0%, black), url(${track_list[track_index].album_image_small_jpg}), url(${track_list[track_index].album_image_small_webp})`;
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
 
@@ -137,9 +147,9 @@ function loadTrack(track_index) {
   });
 
   document.body.style.background = "#000000";
-  document.body.style.background = `-webkit-radial-gradient(center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].album_image_big})`;
-  document.body.style.background = `-moz-radial-gradient(center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].album_image_big}`;
-  document.body.style.background = `radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].album_image_big}`;
+  document.body.style.background = `-webkit-radial-gradient(center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].album_image_big_jpg}), url(${track_list[track_index].album_image_big_webp})`;
+  document.body.style.background = `-moz-radial-gradient(center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].album_image_big_jpg}), url(${track_list[track_index].album_image_big_jpg}, ${track_list[track_index].album_image_big_webp}`;
+  document.body.style.background = `radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].album_image_big_jpg}), url(${track_list[track_index].album_image_big_jpg}, ${track_list[track_index].album_image_big_webp}`;
 
   // Set an interval of 1000 milliseconds
   // for updating the seek slider
