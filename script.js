@@ -131,7 +131,7 @@ function loadTrack(track_index) {
   curr_track.load();
 
   // Update details of the track
-  track_art.style.backgroundImage = `linear-gradient(to bottom, transparent 0%, black), url(${track_list[track_index].album_image_small_jpg}), url(${track_list[track_index].album_image_small_webp})`;
+  track_art.style.backgroundImage = `linear-gradient(to bottom, transparent 0%, black), url(${track_list[track_index].album_image_small_webp})`;
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
 
@@ -147,9 +147,9 @@ function loadTrack(track_index) {
   });
 
   document.body.style.background = "#000000";
-  document.body.style.background = `-webkit-radial-gradient(center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].album_image_big_jpg}), url(${track_list[track_index].album_image_big_webp})`;
-  document.body.style.background = `-moz-radial-gradient(center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].album_image_big_jpg}), url(${track_list[track_index].album_image_big_jpg}, ${track_list[track_index].album_image_big_webp}`;
-  document.body.style.background = `radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].album_image_big_jpg}), url(${track_list[track_index].album_image_big_jpg}, ${track_list[track_index].album_image_big_webp}`;
+  document.body.style.background = `-webkit-radial-gradient(center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].album_image_big_webp})`;
+  document.body.style.background = `-moz-radial-gradient(center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].album_image_big_webp})`;
+  document.body.style.background = `radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4), #000000 90%), url(${track_list[track_index].album_image_big_webp})`;
 
   // Set an interval of 1000 milliseconds
   // for updating the seek slider
